@@ -1,0 +1,2 @@
+class ShrtnController < ApplicationController
+end
