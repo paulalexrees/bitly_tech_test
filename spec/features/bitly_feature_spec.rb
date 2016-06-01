@@ -20,6 +20,13 @@ describe 'bitly' do
       expect(page).to have_content "Your shortened link:"
     end
 
+    it 'displays the long URL you just submitted' do
+      visit '/'
+      fill_in "URL-input", with: "http://testing.com"
+      click_button "Submit"
+      expect(page).to have_content "http://testing.com"
+    end
+
   end
 
 end
